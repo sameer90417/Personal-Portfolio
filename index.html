@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>My awesome portfolio</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+    <style>
+      @import "utilities.css";
+      :root {
+        --primary: #3dcfd3;
+        --dark: #161616;
+        --pure: #ffffff;
+        --ternary: #898989;
+        --light: #f2f2f2;
+        --secondary: #070606;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        -webkit-font-smoothing: antialiased;
+      }
+      header {
+        background: var(--dark);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 87%, 0 100%);
+        background-image: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.9),
+            rgba(0, 0, 0, 1)
+          ),
+          url("https://i.pinimg.com/originals/3d/08/e0/3d08e03cb40252526fee2036a67f07f1.gif");
+        /* filter: blur(8px);
+    -webkit-filter: blur(8px); */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .container {
+        max-width: 1152px;
+        padding: 0 15px;
+        margin: 0 auto;
+      }
+
+      @media (min-width: 576px) {
+        .container {
+          max-width: 540px;
+        }
+      }
+
+      @media (min-width: 768px) {
+        .container {
+          max-width: 720px;
+        }
+      }
+
+      @media (min-width: 992px) {
+        .container {
+          max-width: 960px;
+        }
+      }
+
+      @media (min-width: 1200px) {
+        .container {
+          max-width: 1152px;
+        }
+      }
+
+      header nav .left a {
+        color: var(--pure);
+        text-decoration: none;
+        margin-right: 2rem;
+        text-transform: uppercase;
+        transition: all 0.3s ease;
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+      }
+      header nav .left a:hover {
+        color: var(--primary);
+      }
+      header nav {
+        padding: 2rem 0;
+      }
+      header nav .branding {
+        margin-right: 3rem;
+      }
+      .hero {
+        padding: 3rem 0;
+      }
+      .hero .left img {
+        width: 400px;
+      }
+      .hero .right {
+        color: var(--pure);
+      }
+      .hero .right h6 {
+        font-size: 1.6rem;
+        color: var(--primary);
+        margin-bottom: 0.5rem;
+      }
+      .hero .right h1 {
+        font-size: 4rem;
+        font-weight: 100;
+        line-height: 1.2;
+        margin-bottom: 2rem;
+      }
+      .hero .right h1 span {
+        color: var(--primary);
+      }
+      .hero .right p {
+        line-height: 1.9;
+        margin-bottom: 2rem;
+      }
+      .hero .right {
+        margin-top: -7rem;
+      }
+
+      section {
+        padding: 6rem 0;
+      }
+      section.about .about-me-img {
+        height: 450px;
+      }
+      section.about h1 {
+        margin-bottom: 1rem;
+        font-size: 1.6rem;
+        font-weight: 400;
+      }
+      section.about h1 span {
+        color: var(--primary);
+      }
+      section.about h3 {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        font-weight: 400;
+      }
+
+      section.about p {
+        font-family: "Lato", sans-serif;
+        color: var(--ternary);
+        line-height: 1.8;
+        margin-bottom: 2rem;
+      }
+      section.about .social {
+        display: flex;
+      }
+      section.about .social a {
+        background: var(--dark);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        margin-right: 0.6rem;
+        transition: all 0.3s ease;
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+      }
+      section.about .social a:hover {
+        background: var(--primary);
+      }
+      section.about .social a img {
+        width: 100%;
+        height: 100%;
+        padding: 0.5rem;
+      }
+
+      .section-heading {
+        color: var(--secondary);
+        text-align: center;
+        margin-bottom: 1rem;
+        line-height: 0.5;
+      }
+      .section-heading span {
+        color: var(--primary);
+      }
+      .section-heading + p {
+        color: var(--ternary);
+        font-family: "Lato", sans-serif;
+        margin-bottom: 8rem;
+        text-align: center;
+      }
+      section.services {
+        background: var(--light);
+      }
+      section.services .card-wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 2rem;
+        grid-row-gap: 6rem;
+      }
+      section.services .card-wrapper .card {
+        background: var(--pure);
+        padding: 3rem 2rem;
+        position: relative;
+        padding-top: 5rem;
+        text-align: center;
+        transition: all 0.3s ease;
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+      }
+      section.services .card-wrapper .card img {
+        position: absolute;
+        top: -3.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+      }
+      section.services .card-wrapper .card h2 {
+        font-weight: 400;
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+      }
+      section.services .card-wrapper .card p {
+        font-family: "Lato", sans-serif;
+        color: var(--ternary);
+        line-height: 1.6;
+      }
+
+      section.services .card-wrapper .card:hover {
+        background: var(--dark);
+      }
+      section.services .card-wrapper .card:hover h2,
+      section.services .card-wrapper .card:hover p {
+        color: var(--pure);
+      }
+
+      section.freelancer {
+        text-align: center;
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+          url(../images/camera.png);
+        color: var(--pure);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 60% 80%, 0 100%);
+        padding-bottom: 14rem;
+      }
+      section.freelancer h1 {
+        font-size: 3rem;
+        margin-bottom: 0.5rem;
+      }
+      section.freelancer p {
+        font-size: 1.3rem;
+        margin-bottom: 2rem;
+        font-family: "Lato", sans-serif;
+      }
+
+      section.reviews .slider .slide img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 2rem;
+      }
+      section.reviews .slider .slide {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 0 10rem;
+      }
+      section.reviews .slider .slide p {
+        font-family: "Lato", sans-serif;
+        color: var(--ternary);
+        margin-bottom: 1rem;
+      }
+      section.reviews .slider .slide span {
+        font-size: 0.8rem;
+      }
+      section.reviews .slider-dots .dots {
+        list-style-type: none;
+        display: flex !important;
+        justify-content: center;
+      }
+      section.reviews .slider-dots {
+        margin-top: 3rem;
+      }
+
+      section.reviews .slider-dots button {
+        font-size: 0;
+        width: 8px;
+        height: 5px;
+        margin-right: 0.3rem;
+        border: none;
+        outline: none;
+        background: var(--ternary);
+        border-radius: 50px;
+        -webkit-border-radius: 50px;
+        -moz-border-radius: 50px;
+        -ms-border-radius: 50px;
+        -o-border-radius: 50px;
+        cursor: pointer;
+      }
+      section.reviews .dots li.slick-active button {
+        background: var(--primary);
+        width: 20px;
+      }
+
+      section.contact .card-wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 3rem;
+      }
+      section.contact .card-wrapper .card {
+        text-align: center;
+      }
+      section.contact .card-wrapper .card img {
+        margin-bottom: 3rem;
+      }
+      section.contact .card-wrapper .card h1 {
+        font-weight: 400;
+        margin-bottom: 1rem;
+      }
+      section.contact .card-wrapper .card h6 {
+        font-size: 1rem;
+        color: var(--ternary);
+        font-weight: 400;
+        margin-bottom: 4rem;
+      }
+
+      section.contact .input-wrap {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 2rem;
+        margin-bottom: 2rem;
+      }
+      section.contact .input-wrap-2 {
+        display: flex;
+        flex-direction: column;
+      }
+      section.contact .input-wrap-2 input {
+        margin-bottom: 2rem;
+      }
+      section.contact input {
+        padding: 0.5rem;
+        border: 1px solid var(--light);
+        font-size: 0.9rem;
+      }
+      section.contact .input-wrap-2 textarea {
+        padding: 0.5rem;
+        border: 1px solid var(--light);
+        font-size: 0.9rem;
+      }
+      section.contact .input-wrap-2 textarea:focus,
+      section.contact input:focus {
+        outline: none;
+      }
+      section.contact .btn-wrapper {
+        text-align: center;
+        margin-top: 2rem;
+      }
+
+      footer {
+        background: var(--dark);
+        text-align: center;
+        padding: 5rem 0;
+      }
+      footer .footer-logo {
+        margin-bottom: 3rem;
+        width: 150px;
+      }
+      footer .footer-socials a {
+        margin-right: 1rem;
+      }
+      footer .footer-socials {
+        margin-bottom: 3rem;
+        margin-right: -1rem;
+      }
+      footer .copyright {
+        color: var(--ternary);
+      }
+
+      .site-main-wrapper {
+        position: relative;
+      }
+      .hamberger {
+        position: absolute;
+        top: 40px;
+        right: 40px;
+        z-index: 11;
+        background: none;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        display: none;
+      }
+      .hamberger img {
+        width: 30px;
+      }
+
+      .mobile-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1001;
+        background: var(--light);
+        width: 100%;
+        height: 100%;
+        padding: 2rem;
+        padding-top: 5rem;
+        transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+        -moz-transform: translateX(-100%);
+        -ms-transform: translateX(-100%);
+        -o-transform: translateX(-100%);
+        transition: all 0.5s ease-in-out;
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        -ms-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+      }
+      .open {
+        transform: translateX(0);
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -o-transform: translateX(0);
+      }
+      .times {
+        position: fixed;
+        top: 30px;
+        right: 30px;
+        border: none;
+        background: none;
+        outline: none;
+        cursor: pointer;
+      }
+      .times img {
+        width: 30px;
+      }
+
+      .mobile-nav ul {
+        list-style-type: none;
+      }
+      .mobile-nav ul li a {
+        color: var(--secondary);
+        text-decoration: none;
+        font-size: 2rem;
+      }
+
+      @media (max-width: 1024px) {
+        header #main-nav {
+          display: none;
+        }
+        .hamberger {
+          display: block;
+        }
+        .hero .left img {
+          width: 260px;
+        }
+        .hero .right h1 {
+          font-size: 3rem;
+        }
+        .hero {
+          padding-top: 10rem;
+        }
+        header {
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 27% 89%, 0 100%);
+        }
+        section.about .about-me-img {
+          height: 360px;
+        }
+        section.services .card-wrapper {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        section.blog .card-wrapper {
+          grid-template-columns: repeat(1, 1fr);
+        }
+      }
+
+      @media (max-width: 576px) {
+        .hero {
+          flex-direction: column;
+        }
+        header {
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 69% 95%, 0 100%);
+        }
+        .hero .right {
+          position: absolute;
+          top: 260px;
+          padding: 0 1rem;
+          background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9));
+        }
+        .hero .left {
+          margin-top: -5rem;
+          margin-right: -9rem;
+          padding-bottom: 4rem;
+        }
+        .about-inner-wrap {
+          flex-direction: column;
+        }
+        .about .right {
+          text-align: center;
+          margin-top: 2rem;
+        }
+        .about .right .social {
+          justify-content: center;
+        }
+        section {
+          padding: 4rem 0;
+        }
+        section.services .card-wrapper {
+          grid-template-columns: repeat(1, 1fr);
+          margin-top: 6rem;
+        }
+        section.freelancer h1 {
+          line-height: 1.2;
+        }
+        section.freelancer {
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 67% 90%, 0 100%);
+          padding-bottom: 8rem;
+        }
+        section.reviews .slider .slide {
+          padding: 0;
+        }
+        .section-heading + p {
+          margin-bottom: 3rem;
+        }
+        section.contact .card-wrapper {
+          grid-template-columns: repeat(1, 1fr);
+        }
+        section.contact .input-wrap {
+          grid-template-columns: repeat(1, 1fr);
+        }
+      }
+
+      .man {
+        width: 279px;
+        margin-left: -71px;
+        margin-top: 10px;
+        height: 392px;
+        border-radius: 50%;
+      }
+
+      .mandiv {
+        height: 500px;
+      }
+
+      .aboutImg {
+        text-align: center;
+      }
+
+      .about .container .right {
+        margin-left: -205px;
+      }
+
+      section.about .about-me-img {
+        margin-left: -235px;
+      }
+
+      .btn {
+        border-radius: 20px;
+      }
+      .flex {
+        display: flex;
+      }
+      .items-center {
+        align-items: center;
+      }
+      .justify-between {
+        justify-content: space-between;
+      }
+      .btn {
+        padding: 0.8rem 3rem;
+        font-size: 1rem;
+        font-weight: 600;
+        border: 2px solid transparent;
+        outline: none;
+        cursor: pointer;
+        text-transform: uppercase;
+        transition: all 0.3s ease;
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+      }
+      .btn-primary {
+        background: var(--primary);
+        color: var(--secondary);
+      }
+      .btn-primary:hover {
+        background: transparent;
+        border-color: var(--primary);
+        color: var(--primary);
+      }
+      .btn-secondary {
+        background: transparent;
+        color: var(--primary);
+        border-color: var(--primary);
+      }
+      .btn-secondary:hover {
+        background: var(--primary);
+        color: var(--secondary);
+      }
+
+      .flex-1 {
+        flex: 1;
+      }
+      .justify-center {
+        justify-content: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="site-main-wrapper">
+      <button class="hamberger">
+        <img src="./images/hamberger.svg" alt="" />
+      </button>
+
+      <div class="mobile-nav">
+        <button class="times"><img src="./images/times.svg" alt="" /></button>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Skills</a></li>
+        </ul>
+      </div>
+      <header>
+        <div class="container">
+          <nav id="main-nav" class="flex items-center justify-between">
+            <div class="left flex items-center">
+              <div>
+                <a href="#">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Skills</a>
+              </div>
+            </div>
+            <div class="right">
+              <button class="btn btn-primary">Contact</button>
+            </div>
+          </nav>
+          <div class="hero flex items-center justify-between">
+            <div class="left flex-1 flex justify-center mandiv">
+              <img class="wow fadeInLeft man" src="./images/man.jpg" alt="" />
+            </div>
+            <div class="wow fadeInRight right flex-1">
+              <h6>Doulat Ram</h6>
+              <h1>I’m a <span>CSE Student</span></h1>
+              <h1 style="font-size: large">
+                <span style="font-size: 30px">Welcome </span>to my Portfolio
+              </h1>
+              <p>Building the Future with Technology</p>
+              <div>
+                <a
+                  target="_blank"
+                  style="text-decoration: none"
+                  href="https://drive.google.com/file/d/1j6SWUZdT39T1an45M2CX8XNsjmhmyNZw/view"
+                  class="btn btn-secondary"
+                  >DOWNLOAD CV</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section id="about" class="about">
+        <div class="container flex items-center about-inner-wrap">
+          <div class="flex-1 aboutImg">
+            <img
+              class="wow fadeInLeft about-me-img"
+              src="./images/man-2.png"
+              alt=""
+            />
+          </div>
+          <div class="wow fadeInRight flex-1 right">
+            <h1>About <span>Me</span></h1>
+            <h3>Hello, i’m Doulat Ram.</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit
+              amet consectetur adipisicing elit sed do eiusmod tempor incididunt
+              ut labore et dolore magna aliqua. Ut enim ad minim veniam quis
+              nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat
+            </p>
+            <div class="social">
+              <a
+                target="_blank"
+                href="https://www.linkedin.com/in/doulat-ram-8362a623a/"
+                ><img src="./images/linkedin.png" alt=""
+              /></a>
+              <a target="_blank" href="https://github.com/sameer90417">
+                <img src="./images/githubw.png" alt=""
+              /></a>
+              <a target="_blank" href="https://www.instagram.com/_sameer_1000/">
+                <img src="./images/instagram.png" alt=""
+              /></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="services" class="services">
+        <div class="container">
+          <h1 class="section-heading wow flipInX"><span>My </span>Skills</h1>
+          <p class="wow flipInX">
+            I'm very enthusiastic for learning new Technology and implement them
+            in real life.
+          </p>
+          <div class="card-wrapper">
+            <div class="wow fadeInUp card">
+              <img width="110" height="110" src="./images/java.png" alt="" />
+              <h2>Java</h2>
+              <p>
+                There are many variations of passages of but the majority have
+                suffered alteration in some form.
+              </p>
+            </div>
+            <div class="wow fadeInUp card">
+              <img width="110" height="110" src="./images/hibernate" alt="" />
+              <h2>Hibernate</h2>
+              <p>
+                There are many variations of passages of but the majority have
+                suffered alteration in some form.
+              </p>
+            </div>
+            <div class="wow fadeInUp card">
+              <img width="110" height="110" src="./images/mysql.png" alt="" />
+              <h2>MySQL</h2>
+              <p>
+                There are many variations of passages of but the majority have
+                suffered alteration in some form.
+              </p>
+            </div>
+            <div class="wow fadeInUp card">
+              <img width="110" height="110" src="./images/web.jpg" alt="" />
+              <h2>Web Designing</h2>
+              <p>
+                There are many variations of passages of but the majority have
+                suffered alteration in some form.
+              </p>
+            </div>
+            <div class="wow fadeInUp card">
+              <img
+                width="110"
+                height="110"
+                src="./images/javascript.png"
+                alt=""
+              />
+              <h2>Javascript</h2>
+              <p>
+                There are many variations of passages of but the majority have
+                suffered alteration in some form.
+              </p>
+            </div>
+            <div class="wow fadeInUp card">
+              <img width="110" height="110" src="./images/spring.svg" alt="" />
+              <h2>Spring framework</h2>
+              <p>
+                There are many variations of passages of but the majority have
+                suffered alteration in some form.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="freelancer">
+        <h1 class="wow fadeInLeft">I Am looking For Internship.</h1>
+        <p class="wow fadeInRight">
+          Passionate Student Eager to Gain Practical Skills in Internship Role
+        </p>
+        <a
+          class="btn btn-primary"
+          target="_blank"
+          style="text-decoration: none"
+          href="https://drive.google.com/file/d/1j6SWUZdT39T1an45M2CX8XNsjmhmyNZw/view"
+          >DOWNLOAD CV</a
+        >
+      </section>
+      <section class="reviews">
+        <div class="container wow fadeInLeft">
+          <h1 class="section-heading"><span>My</span> Qualification</h1>
+          <br /><br />
+          <div class="slider">
+            <div class="slide">
+              <img src="./images/man.jpg" alt="" />
+              <h3>B.Tech. CSE (Computer Science Engineering)</h3>
+              <br />
+              <p class="section-heading"><span>Batch : </span>2020-2024</p>
+              <p class="section-heading">
+                <span>Collage : </span>Swami Vivekanand Institute of Engineering
+                and Technology, Rajpura Punjab
+              </p>
+              <span>Average 8.29 SGPA till 5th semester</span>
+            </div>
+            <div class="slide">
+              <img src="./images/man.jpg" alt="" />
+              <h3>Intermediate</h3>
+              <br />
+              <p class="section-heading"><span>Session : </span>2018-2020</p>
+              <p class="section-heading">
+                <span>School : </span>Govt. Boy School, Fazilka Punjab
+              </p>
+              <span>82%</span>
+            </div>
+            <div class="slide">
+              <img src="./images/man.jpg" alt="" />
+              <h3>Matriculation</h3>
+              <br />
+              <p class="section-heading"><span>Session : </span>2016-2018</p>
+              <p class="section-heading">
+                <span>School : </span>S.D. High School, Fazilka Punjab
+              </p>
+              <span>81.3%</span>
+            </div>
+          </div>
+          <div class="slider-dots"></div>
+        </div>
+      </section>
+
+      <section class="contact">
+        <div class="container">
+          <h1 class="wow fadeInUp section-heading">Contact <span>me</span></h1>
+          <br /><br />
+          <div class="card-wrapper">
+            <div class="card">
+              <img class="wow tada" src="./images/call.png" alt="" />
+              <h1>Calling no</h1>
+              <h6>+91 6283574563</h6>
+            </div>
+            <div class="card">
+              <img class="wow swing" src="./images/email.png" alt="" />
+              <h1>Email id</h1>
+              <h6>sameerkumar37555@gmail.com</h6>
+            </div>
+            <div class="card">
+              <img class="wow bounceIn" src="./images/address.png" alt="" />
+              <h1>Address</h1>
+              <h6>Fazilka, Punjab</h6>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer>
+        <div class="footer-socials">
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/in/doulat-ram-8362a623a/"
+            ><img src="./images/linkedin.png" alt=""
+          /></a>
+          <a target="_blank" href="https://github.com/sameer90417">
+            <img src="./images/githubw.png" alt=""
+          /></a>
+          <a target="_blank" href="https://www.instagram.com/_sameer_1000/">
+            <img src="./images/instagram.png" alt=""
+          /></a>
+        </div>
+        <div class="copyright">Copyright 2023 © Doulat Ram</div>
+      </footer>
+    </div>
+
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script src="./js/app.js"></script>
+    <script>
+      wow = new WOW({
+        boxClass: "wow", // default
+        animateClass: "animated", // default
+        offset: 0, // default
+        mobile: true, // default
+        live: true, // default
+      });
+      wow.init();
+
+      $(document).ready(function () {
+        $(".slider").slick({
+          arrows: false,
+          dots: true,
+          appendDots: ".slider-dots",
+          dotsClass: "dots",
+        });
+
+        let hamberger = document.querySelector(".hamberger");
+        let times = document.querySelector(".times");
+        let mobileNav = document.querySelector(".mobile-nav");
+
+        hamberger.addEventListener("click", function () {
+          mobileNav.classList.add("open");
+        });
+
+        times.addEventListener("click", function () {
+          mobileNav.classList.remove("open");
+        });
+      });
+    </script>
+  </body>
+</html>
