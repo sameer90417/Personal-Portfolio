@@ -1,944 +1,1309 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>My awesome portfolio</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
-    />
-    <link rel="stylesheet" href="./css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.css"
-    />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
-    <style>
-      @import "utilities.css";
-      :root {
-        --primary: #3dcfd3;
-        --dark: #161616;
-        --pure: #ffffff;
-        --ternary: #898989;
-        --light: #f2f2f2;
-        --secondary: #070606;
-      }
 
-      body {
-        font-family: "Poppins", sans-serif;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>My awesome portfolio</title>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+  <style>
+    @import "utilities.css";
 
-      html {
-        scroll-behavior: smooth;
+    :root {
+      --primary: #3dcfd3;
+      --dark: #161616;
+      --pure: #ffffff;
+      --ternary: #898989;
+      --light: #f2f2f2;
+      --secondary: #070606;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 1152px;
+      padding: 0 15px;
+      margin: 0 auto;
+    }
+
+    @media (min-width: 576px) {
+      .container {
+        max-width: 540px;
       }
-      * {
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-        -webkit-font-smoothing: antialiased;
+    }
+
+    @media (min-width: 768px) {
+      .container {
+        max-width: 720px;
       }
-      header {
-        background: var(--dark);
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 87%, 0 100%);
-        background-image: linear-gradient(
-            to right,
-            rgba(0, 0, 0, 0.5),
-            rgba(0, 0, 0, 0.9),
-            rgba(0, 0, 0, 1)
-          ),
-          url("https://i.pinimg.com/originals/3d/08/e0/3d08e03cb40252526fee2036a67f07f1.gif");
-        /* filter: blur(8px);
-    -webkit-filter: blur(8px); */
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
+    }
+
+    @media (min-width: 992px) {
+      .container {
+        max-width: 960px;
       }
+    }
+
+    @media (min-width: 1200px) {
       .container {
         max-width: 1152px;
-        padding: 0 15px;
-        margin: 0 auto;
+      }
+    }
+
+    .hero {
+      padding: 3rem 0;
+    }
+
+    .hero .left img {
+      width: 400px;
+    }
+
+    .hero .right {
+      color: var(--pure);
+    }
+
+    .hero .right h6 {
+      font-size: 1.6rem;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .hero .right h1 {
+      font-size: 4rem;
+      font-weight: 100;
+      line-height: 1.2;
+      margin-bottom: 2rem;
+    }
+
+    .hero .right h1 span {
+      color: var(--primary);
+    }
+
+    .hero .right p {
+      line-height: 1.9;
+      margin-bottom: 2rem;
+    }
+
+    .hero .right {
+      margin-top: -7rem;
+    }
+
+    .about-me-img {
+      height: 450px;
+    }
+
+    section.about h1 {
+      margin-bottom: 1rem;
+      font-size: 1.6rem;
+      font-weight: 400;
+    }
+
+    section.about h1 span {
+      color: var(--primary);
+    }
+
+    section.about h3 {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      font-weight: 400;
+    }
+
+    section.about p {
+      font-family: "Lato", sans-serif;
+      color: var(--ternary);
+      line-height: 1.8;
+      margin-bottom: 2rem;
+    }
+
+    section.about .social {
+      display: flex;
+    }
+
+    section.about .social a {
+      background: var(--dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      margin-right: 0.6rem;
+      transition: all 0.3s ease;
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -ms-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+    }
+
+    section.about .social a:hover {
+      background: var(--primary);
+    }
+
+    section.about .social a img {
+      width: 100%;
+      height: 100%;
+      padding: 0.5rem;
+    }
+
+    .section-heading {
+      color: var(--secondary);
+      text-align: center;
+      margin-bottom: 1rem;
+      line-height: 0.5;
+    }
+
+    .section-heading span {
+      color: var(--primary);
+    }
+
+    .section-heading+p {
+      color: var(--ternary);
+      font-family: "Lato", sans-serif;
+      margin-bottom: 8rem;
+      text-align: center;
+    }
+
+    section.services {
+      background: var(--light);
+    }
+
+    section.services .card-wrapper {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-column-gap: 2rem;
+      grid-row-gap: 6rem;
+    }
+
+    section.services .card-wrapper .card {
+      background: var(--pure);
+      padding: 3rem 2rem;
+      position: relative;
+      padding-top: 5rem;
+      text-align: center;
+      transition: all 0.3s ease;
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -ms-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+    }
+
+    section.services .card-wrapper .card img {
+      position: absolute;
+      top: -3.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+      -moz-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      -o-transform: translateX(-50%);
+    }
+
+    section.services .card-wrapper .card h2 {
+      font-weight: 400;
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    section.services .card-wrapper .card p {
+      font-family: "Lato", sans-serif;
+      color: var(--ternary);
+      line-height: 1.6;
+    }
+
+    section.services .card-wrapper .card:hover {
+      background: var(--dark);
+    }
+
+    section.services .card-wrapper .card:hover h2,
+    section.services .card-wrapper .card:hover p {
+      color: var(--pure);
+    }
+
+    section.freelancer {
+      text-align: center;
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url(../images/camera.png);
+      color: var(--pure);
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 60% 80%, 0 100%);
+      padding-bottom: 14rem;
+    }
+
+    section.freelancer h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    section.freelancer p {
+      font-size: 1.3rem;
+      margin-bottom: 2rem;
+      font-family: "Lato", sans-serif;
+    }
+
+    section.reviews .slider .slide img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 2rem;
+    }
+
+    section.reviews .slider .slide {
+      text-align: center;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      padding: 0 10rem;
+    }
+
+    section.reviews .slider .slide p {
+      font-family: "Lato", sans-serif;
+      color: var(--ternary);
+      margin-bottom: 1rem;
+    }
+
+    section.reviews .slider .slide span {
+      font-size: 0.8rem;
+    }
+
+    section.reviews .slider-dots .dots {
+      list-style-type: none;
+      display: flex !important;
+      justify-content: center;
+    }
+
+    li.slick-active button {
+      background-color: #C8A1E0 !important;
+    }
+
+    section.reviews .slider-dots {
+      margin-top: 3rem;
+    }
+
+    section.reviews .slider-dots button {
+      font-size: 0;
+      width: 8px;
+      height: 5px;
+      margin-right: 0.3rem;
+      border: none;
+      outline: none;
+      background: var(--ternary);
+      border-radius: 50px;
+      -webkit-border-radius: 50px;
+      -moz-border-radius: 50px;
+      -ms-border-radius: 50px;
+      -o-border-radius: 50px;
+      cursor: pointer;
+    }
+
+    section.reviews .dots li.slick-active button {
+      background: var(--primary);
+      width: 20px;
+    }
+
+    section.contact .card-wrapper {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 3rem;
+    }
+
+    section.contact .card-wrapper .card {
+      text-align: center;
+    }
+
+    section.contact .card-wrapper .card img {
+      margin-bottom: 3rem;
+    }
+
+    section.contact .card-wrapper .card h1 {
+      font-weight: 400;
+      margin-bottom: 1rem;
+    }
+
+    section.contact .card-wrapper .card h6 {
+      font-size: 1rem;
+      color: var(--ternary);
+      font-weight: 400;
+      margin-bottom: 4rem;
+    }
+
+    section.contact .input-wrap {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    section.contact .input-wrap-2 {
+      display: flex;
+      flex-direction: column;
+    }
+
+    section.contact .input-wrap-2 input {
+      margin-bottom: 2rem;
+    }
+
+    section.contact input {
+      padding: 0.5rem;
+      border: 1px solid var(--light);
+      font-size: 0.9rem;
+    }
+
+    section.contact .input-wrap-2 textarea {
+      padding: 0.5rem;
+      border: 1px solid var(--light);
+      font-size: 0.9rem;
+    }
+
+    section.contact .input-wrap-2 textarea:focus,
+    section.contact input:focus {
+      outline: none;
+    }
+
+    section.contact .btn-wrapper {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    footer {
+      background: var(--dark);
+      text-align: center;
+      padding: 5rem 0;
+    }
+
+    footer .footer-logo {
+      margin-bottom: 3rem;
+      width: 150px;
+    }
+
+    footer .footer-socials a {
+      margin-right: 1rem;
+    }
+
+    footer .footer-socials {
+      margin-bottom: 3rem;
+      margin-right: -1rem;
+    }
+
+    footer .copyright {
+      color: var(--ternary);
+    }
+
+    .site-main-wrapper {
+      position: relative;
+    }
+
+    .hamberger {
+      position: absolute;
+      top: 40px;
+      right: 40px;
+      z-index: 11;
+      background: none;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      display: none;
+    }
+
+    .hamberger img {
+      width: 30px;
+    }
+
+    .mobile-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1001;
+      background: var(--light);
+      width: 100%;
+      height: 100%;
+      padding: 2rem;
+      padding-top: 5rem;
+      transform: translateX(-100%);
+      -webkit-transform: translateX(-100%);
+      -moz-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+      -o-transform: translateX(-100%);
+      transition: all 0.5s ease-in-out;
+      -webkit-transition: all 0.5s ease-in-out;
+      -moz-transition: all 0.5s ease-in-out;
+      -ms-transition: all 0.5s ease-in-out;
+      -o-transition: all 0.5s ease-in-out;
+    }
+
+    .open {
+      transform: translateX(0);
+      -webkit-transform: translateX(0);
+      -moz-transform: translateX(0);
+      -ms-transform: translateX(0);
+      -o-transform: translateX(0);
+    }
+
+    .times {
+      position: fixed;
+      top: 30px;
+      right: 30px;
+      border: none;
+      background: none;
+      outline: none;
+      cursor: pointer;
+    }
+
+    .times img {
+      width: 30px;
+    }
+
+    .mobile-nav ul {
+      list-style-type: none;
+    }
+
+    .mobile-nav ul li a {
+      color: var(--secondary);
+      text-decoration: none;
+      font-size: 2rem;
+    }
+
+    @media (max-width: 1024px) {
+      header #main-nav {
+        display: none;
       }
 
-      @media (min-width: 576px) {
-        .container {
-          max-width: 540px;
-        }
+      .hamberger {
+        display: block;
       }
 
-      @media (min-width: 768px) {
-        .container {
-          max-width: 720px;
-        }
-      }
-
-      @media (min-width: 992px) {
-        .container {
-          max-width: 960px;
-        }
-      }
-
-      @media (min-width: 1200px) {
-        .container {
-          max-width: 1152px;
-        }
-      }
-
-      header nav .left a {
-        color: var(--pure);
-        text-decoration: none;
-        margin-right: 2rem;
-        text-transform: uppercase;
-        transition: all 0.3s ease;
-        -webkit-transition: all 0.3s ease;
-        -moz-transition: all 0.3s ease;
-        -ms-transition: all 0.3s ease;
-        -o-transition: all 0.3s ease;
-      }
-      header nav .left a:hover {
-        color: var(--primary);
-      }
-      header nav {
-        padding: 2rem 0;
-      }
-      header nav .branding {
-        margin-right: 3rem;
-      }
-      .hero {
-        padding: 3rem 0;
-      }
       .hero .left img {
-        width: 400px;
+        width: 260px;
       }
-      .hero .right {
-        color: var(--pure);
-      }
-      .hero .right h6 {
-        font-size: 1.6rem;
-        color: var(--primary);
-        margin-bottom: 0.5rem;
-      }
+
       .hero .right h1 {
-        font-size: 4rem;
-        font-weight: 100;
-        line-height: 1.2;
-        margin-bottom: 2rem;
-      }
-      .hero .right h1 span {
-        color: var(--primary);
-      }
-      .hero .right p {
-        line-height: 1.9;
-        margin-bottom: 2rem;
-      }
-      .hero .right {
-        margin-top: -7rem;
-      }
-
-      section {
-        padding: 6rem 0;
-      }
-      section.about .about-me-img {
-        height: 450px;
-      }
-      section.about h1 {
-        margin-bottom: 1rem;
-        font-size: 1.6rem;
-        font-weight: 400;
-      }
-      section.about h1 span {
-        color: var(--primary);
-      }
-      section.about h3 {
-        font-size: 1rem;
-        margin-bottom: 1rem;
-        font-weight: 400;
-      }
-
-      section.about p {
-        font-family: "Lato", sans-serif;
-        color: var(--ternary);
-        line-height: 1.8;
-        margin-bottom: 2rem;
-      }
-      section.about .social {
-        display: flex;
-      }
-      section.about .social a {
-        background: var(--dark);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 35px;
-        height: 35px;
-        border-radius: 50%;
-        -webkit-border-radius: 50%;
-        -moz-border-radius: 50%;
-        -ms-border-radius: 50%;
-        -o-border-radius: 50%;
-        margin-right: 0.6rem;
-        transition: all 0.3s ease;
-        -webkit-transition: all 0.3s ease;
-        -moz-transition: all 0.3s ease;
-        -ms-transition: all 0.3s ease;
-        -o-transition: all 0.3s ease;
-      }
-      section.about .social a:hover {
-        background: var(--primary);
-      }
-      section.about .social a img {
-        width: 100%;
-        height: 100%;
-        padding: 0.5rem;
-      }
-
-      .section-heading {
-        color: var(--secondary);
-        text-align: center;
-        margin-bottom: 1rem;
-        line-height: 0.5;
-      }
-      .section-heading span {
-        color: var(--primary);
-      }
-      .section-heading + p {
-        color: var(--ternary);
-        font-family: "Lato", sans-serif;
-        margin-bottom: 8rem;
-        text-align: center;
-      }
-      section.services {
-        background: var(--light);
-      }
-      section.services .card-wrapper {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-column-gap: 2rem;
-        grid-row-gap: 6rem;
-      }
-      section.services .card-wrapper .card {
-        background: var(--pure);
-        padding: 3rem 2rem;
-        position: relative;
-        padding-top: 5rem;
-        text-align: center;
-        transition: all 0.3s ease;
-        -webkit-transition: all 0.3s ease;
-        -moz-transition: all 0.3s ease;
-        -ms-transition: all 0.3s ease;
-        -o-transition: all 0.3s ease;
-      }
-      section.services .card-wrapper .card img {
-        position: absolute;
-        top: -3.5rem;
-        left: 50%;
-        transform: translateX(-50%);
-        -webkit-transform: translateX(-50%);
-        -moz-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-        -o-transform: translateX(-50%);
-      }
-      section.services .card-wrapper .card h2 {
-        font-weight: 400;
-        font-size: 1.2rem;
-        margin-bottom: 0.5rem;
-      }
-      section.services .card-wrapper .card p {
-        font-family: "Lato", sans-serif;
-        color: var(--ternary);
-        line-height: 1.6;
-      }
-
-      section.services .card-wrapper .card:hover {
-        background: var(--dark);
-      }
-      section.services .card-wrapper .card:hover h2,
-      section.services .card-wrapper .card:hover p {
-        color: var(--pure);
-      }
-
-      section.freelancer {
-        text-align: center;
-        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-          url(../images/camera.png);
-        color: var(--pure);
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 60% 80%, 0 100%);
-        padding-bottom: 14rem;
-      }
-      section.freelancer h1 {
         font-size: 3rem;
-        margin-bottom: 0.5rem;
-      }
-      section.freelancer p {
-        font-size: 1.3rem;
-        margin-bottom: 2rem;
-        font-family: "Lato", sans-serif;
       }
 
-      section.reviews .slider .slide img {
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        -webkit-border-radius: 50%;
-        -moz-border-radius: 50%;
-        -ms-border-radius: 50%;
-        -o-border-radius: 50%;
-        object-fit: cover;
-        margin-bottom: 2rem;
-      }
-      section.reviews .slider .slide {
-        text-align: center;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        padding: 0 10rem;
-      }
-      section.reviews .slider .slide p {
-        font-family: "Lato", sans-serif;
-        color: var(--ternary);
-        margin-bottom: 1rem;
-      }
-      section.reviews .slider .slide span {
-        font-size: 0.8rem;
-      }
-      section.reviews .slider-dots .dots {
-        list-style-type: none;
-        display: flex !important;
-        justify-content: center;
-      }
-      section.reviews .slider-dots {
-        margin-top: 3rem;
+      .hero {
+        padding-top: 10rem;
       }
 
-      section.reviews .slider-dots button {
-        font-size: 0;
-        width: 8px;
-        height: 5px;
-        margin-right: 0.3rem;
-        border: none;
-        outline: none;
-        background: var(--ternary);
-        border-radius: 50px;
-        -webkit-border-radius: 50px;
-        -moz-border-radius: 50px;
-        -ms-border-radius: 50px;
-        -o-border-radius: 50px;
-        cursor: pointer;
-      }
-      section.reviews .dots li.slick-active button {
-        background: var(--primary);
-        width: 20px;
+      .about-me-img {
+        height: 360px;
       }
 
-      section.contact .card-wrapper {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 3rem;
-      }
-      section.contact .card-wrapper .card {
-        text-align: center;
-      }
-      section.contact .card-wrapper .card img {
-        margin-bottom: 3rem;
-      }
-      section.contact .card-wrapper .card h1 {
-        font-weight: 400;
-        margin-bottom: 1rem;
-      }
-      section.contact .card-wrapper .card h6 {
-        font-size: 1rem;
-        color: var(--ternary);
-        font-weight: 400;
-        margin-bottom: 4rem;
-      }
-
-      section.contact .input-wrap {
-        display: grid;
+      section.services .card-wrapper {
         grid-template-columns: repeat(2, 1fr);
-        grid-gap: 2rem;
-        margin-bottom: 2rem;
       }
-      section.contact .input-wrap-2 {
-        display: flex;
+
+      section.blog .card-wrapper {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+
+    @media (max-width: 576px) {
+      .hero {
         flex-direction: column;
       }
-      section.contact .input-wrap-2 input {
-        margin-bottom: 2rem;
+
+      .hero .right {
+        position: absolute;
+        top: 260px;
+        padding: 0 1rem;
+        background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9));
       }
-      section.contact input {
-        padding: 0.5rem;
-        border: 1px solid var(--light);
-        font-size: 0.9rem;
+
+      .hero .left {
+        margin-top: -5rem;
+        margin-right: -9rem;
+        padding-bottom: 4rem;
       }
-      section.contact .input-wrap-2 textarea {
-        padding: 0.5rem;
-        border: 1px solid var(--light);
-        font-size: 0.9rem;
+
+      .about-inner-wrap {
+        flex-direction: column;
       }
-      section.contact .input-wrap-2 textarea:focus,
-      section.contact input:focus {
-        outline: none;
-      }
-      section.contact .btn-wrapper {
+
+      .about .right {
         text-align: center;
         margin-top: 2rem;
       }
 
-      footer {
-        background: var(--dark);
-        text-align: center;
-        padding: 5rem 0;
-      }
-      footer .footer-logo {
-        margin-bottom: 3rem;
-        width: 150px;
-      }
-      footer .footer-socials a {
-        margin-right: 1rem;
-      }
-      footer .footer-socials {
-        margin-bottom: 3rem;
-        margin-right: -1rem;
-      }
-      footer .copyright {
-        color: var(--ternary);
-      }
-
-      .site-main-wrapper {
-        position: relative;
-      }
-      .hamberger {
-        position: absolute;
-        top: 40px;
-        right: 40px;
-        z-index: 11;
-        background: none;
-        border: none;
-        outline: none;
-        cursor: pointer;
-        display: none;
-      }
-      .hamberger img {
-        width: 30px;
-      }
-
-      .mobile-nav {
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 1001;
-        background: var(--light);
-        width: 100%;
-        height: 100%;
-        padding: 2rem;
-        padding-top: 5rem;
-        transform: translateX(-100%);
-        -webkit-transform: translateX(-100%);
-        -moz-transform: translateX(-100%);
-        -ms-transform: translateX(-100%);
-        -o-transform: translateX(-100%);
-        transition: all 0.5s ease-in-out;
-        -webkit-transition: all 0.5s ease-in-out;
-        -moz-transition: all 0.5s ease-in-out;
-        -ms-transition: all 0.5s ease-in-out;
-        -o-transition: all 0.5s ease-in-out;
-      }
-      .open {
-        transform: translateX(0);
-        -webkit-transform: translateX(0);
-        -moz-transform: translateX(0);
-        -ms-transform: translateX(0);
-        -o-transform: translateX(0);
-      }
-      .times {
-        position: fixed;
-        top: 30px;
-        right: 30px;
-        border: none;
-        background: none;
-        outline: none;
-        cursor: pointer;
-      }
-      .times img {
-        width: 30px;
-      }
-
-      .mobile-nav ul {
-        list-style-type: none;
-      }
-      .mobile-nav ul li a {
-        color: var(--secondary);
-        text-decoration: none;
-        font-size: 2rem;
-      }
-
-      @media (max-width: 1024px) {
-        header #main-nav {
-          display: none;
-        }
-        .hamberger {
-          display: block;
-        }
-        .hero .left img {
-          width: 260px;
-        }
-        .hero .right h1 {
-          font-size: 3rem;
-        }
-        .hero {
-          padding-top: 10rem;
-        }
-        header {
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 27% 89%, 0 100%);
-        }
-        section.about .about-me-img {
-          height: 360px;
-        }
-        section.services .card-wrapper {
-          grid-template-columns: repeat(2, 1fr);
-        }
-        section.blog .card-wrapper {
-          grid-template-columns: repeat(1, 1fr);
-        }
-      }
-
-      @media (max-width: 576px) {
-        .hero {
-          flex-direction: column;
-        }
-        header {
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 69% 95%, 0 100%);
-        }
-        .hero .right {
-          position: absolute;
-          top: 260px;
-          padding: 0 1rem;
-          background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9));
-        }
-        .hero .left {
-          margin-top: -5rem;
-          margin-right: -9rem;
-          padding-bottom: 4rem;
-        }
-        .about-inner-wrap {
-          flex-direction: column;
-        }
-        .about .right {
-          text-align: center;
-          margin-top: 2rem;
-        }
-        .about .right .social {
-          justify-content: center;
-        }
-        section {
-          padding: 4rem 0;
-        }
-        section.services .card-wrapper {
-          grid-template-columns: repeat(1, 1fr);
-          margin-top: 6rem;
-        }
-        section.freelancer h1 {
-          line-height: 1.2;
-        }
-        section.freelancer {
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 67% 90%, 0 100%);
-          padding-bottom: 8rem;
-        }
-        section.reviews .slider .slide {
-          padding: 0;
-        }
-        .section-heading + p {
-          margin-bottom: 3rem;
-        }
-        section.contact .card-wrapper {
-          grid-template-columns: repeat(1, 1fr);
-        }
-        section.contact .input-wrap {
-          grid-template-columns: repeat(1, 1fr);
-        }
-      }
-
-      .man {
-        width: 279px;
-        margin-left: -71px;
-        margin-top: 10px;
-        height: 392px;
-        border-radius: 50%;
-      }
-
-      .mandiv {
-        height: 500px;
-      }
-
-      .aboutImg {
-        text-align: center;
-      }
-
-      .about .container .right {
-        margin-left: -205px;
-      }
-
-      section.about .about-me-img {
-        margin-left: -235px;
-      }
-
-      .btn {
-        border-radius: 20px;
-      }
-      .flex {
-        display: flex;
-      }
-      .items-center {
-        align-items: center;
-      }
-      .justify-between {
-        justify-content: space-between;
-      }
-      .btn {
-        padding: 0.8rem 3rem;
-        font-size: 1rem;
-        font-weight: 600;
-        border: 2px solid transparent;
-        outline: none;
-        cursor: pointer;
-        text-transform: uppercase;
-        transition: all 0.3s ease;
-        -webkit-transition: all 0.3s ease;
-        -moz-transition: all 0.3s ease;
-        -ms-transition: all 0.3s ease;
-        -o-transition: all 0.3s ease;
-      }
-      .btn-primary {
-        background: var(--primary);
-        color: var(--secondary);
-      }
-      .btn-primary:hover {
-        background: transparent;
-        border-color: var(--primary);
-        color: var(--primary);
-      }
-      .btn-secondary {
-        background: transparent;
-        color: var(--primary);
-        border-color: var(--primary);
-      }
-      .btn-secondary:hover {
-        background: var(--primary);
-        color: var(--secondary);
-      }
-
-      .flex-1 {
-        flex: 1;
-      }
-      .justify-center {
+      .about .right .social {
         justify-content: center;
       }
-    </style>
-  </head>
 
-  <body>
-    <div class="site-main-wrapper">
-      <button class="hamberger">
-        <img src="./images/hamberger.svg" alt="" />
-      </button>
+      section {
+        padding: 4rem 0;
+      }
 
-      <div class="mobile-nav">
-        <button class="times"><img src="./images/times.svg" alt="" /></button>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Skills</a></li>
-        </ul>
+      section.services .card-wrapper {
+        grid-template-columns: repeat(1, 1fr);
+        margin-top: 6rem;
+      }
+
+      section.freelancer h1 {
+        line-height: 1.2;
+      }
+
+      section.freelancer {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 67% 90%, 0 100%);
+        padding-bottom: 8rem;
+      }
+
+      section.reviews .slider .slide {
+        padding: 0;
+      }
+
+      .section-heading+p {
+        margin-bottom: 3rem;
+      }
+
+      section.contact .card-wrapper {
+        grid-template-columns: repeat(1, 1fr);
+      }
+
+      section.contact .input-wrap {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+
+    .man {
+      width: 279px;
+      margin-left: -71px;
+      margin-top: 10px;
+      height: 392px;
+      border-radius: 50%;
+    }
+
+    .mandiv {
+      height: 500px;
+    }
+
+    .aboutImg {
+      text-align: center;
+    }
+
+    section.about .about-me-img {
+      margin-left: -235px;
+    }
+
+    .btn {
+      border-radius: 20px;
+    }
+
+    .flex {
+      display: flex;
+    }
+
+    .items-center {
+      align-items: center;
+    }
+
+    .justify-between {
+      justify-content: space-between;
+    }
+
+    .btn {
+      padding: 0.8rem 3rem;
+      font-size: 1rem;
+      font-weight: 600;
+      border: 2px solid transparent;
+      outline: none;
+      cursor: pointer;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -ms-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+    }
+
+    .btn-primary {
+      background: #C8A1E0;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: transparent;
+      border-color: #C8A1E0;
+      color: #C8A1E0;
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--primary);
+      border-color: var(--primary);
+    }
+
+    .btn-secondary:hover {
+      background: var(--primary);
+      color: var(--secondary);
+    }
+
+    .flex-1 {
+      flex: 1;
+    }
+
+    .justify-center {
+      justify-content: center;
+    }
+  </style>
+  <style>
+    /* colors 
+        white-primary : FFFBF5
+        white-secondary: F7EFE5
+        purple-primary: 674188
+        purple-secondary: C3ACD0 */
+    @import url("https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&family=SUSE:wght@100..800&display=swap");
+
+    body {
+      font-family: "SUSE", sans-serif;
+    }
+
+    .material-symbols-outlined {
+      font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+    }
+
+    h1 {
+      font-family: "Permanent Marker", cursive;
+    }
+
+    .specialtext {
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: #fffbf5;
+    }
+
+    /* width */
+    ::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: #7743dbbe;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+
+    /* styles.css */
+    .typing-container {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 24px;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 2px solid;
+      width: 24ch;
+      /* Adjust width according to the length of your longest text */
+      animation: typing 4s steps(24) 1s 1 normal both, blink 500ms step-end infinite;
+    }
+
+    @keyframes typing {
+      from {
+        width: 0;
+      }
+
+      to {
+        width: 24ch;
+        /* Adjust this width based on the longest line */
+      }
+    }
+
+    @keyframes blink {
+
+      from,
+      to {
+        border-color: transparent;
+      }
+
+      50% {
+        border-color: black;
+      }
+    }
+
+    .img-container {
+      width: 100%;
+      max-width: 300px;
+      height: 250px;
+      background-color: #C8A1E0;
+      clip-path: ellipse(42% 50% at 50% 50%);
+    }
+
+    .img-container2 {
+      width: 100%;
+      max-width: 200px;
+      height: 170px;
+      background-color: #C8A1E0;
+      clip-path: ellipse(42% 50% at 50% 50%);
+    }
+
+    /* From Uiverse.io by Pradeepsaranbishnoi */
+    .social-links,
+    .flex-center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .social-btn {
+      cursor: pointer;
+      height: 50px;
+      width: 50px;
+      font-family: 'Titillium Web', sans-serif;
+      color: #333;
+      border-radius: 10px;
+      box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+      background: #fffbf5;
+      margin: 5px;
+      transition: 0.3s;
+      justify-content: center;
+    }
+
+    .social-btn svg {
+      height: 24px;
+      width: 24px;
+    }
+
+    .social-btn span {
+      width: 0px;
+      overflow: hidden;
+      transition: 0.3s;
+      text-align: center;
+      margin-left: 5px;
+    }
+
+    .social-btn:hover {
+      width: 150px;
+      border-radius: 5px;
+    }
+
+    .social-btn:hover span {
+      padding: 2px;
+      width: 80px;
+    }
+
+    #twitter svg {
+      fill: #1da1f2;
+    }
+
+    #linkedin svg {
+      fill: #0e76a8;
+    }
+
+    #github {
+      fill: #333;
+    }
+
+    .glass-panel {
+      color: #fff;
+      margin: 40px auto;
+      background-color: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      width: 100%;
+      border-radius: 15px;
+      padding: 32px;
+      backdrop-filter: blur(10px);
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+  <header class="w-full lg:my-4 flex justify-center z-20 bg-[#fffbf5] fixed">
+    <div class="absolute top-[50%] z-0 w-full h-[1px] bg-[#f7e9ff]"></div>
+    <div class="absolute top-[40%] z-0 w-full h-[1px] bg-[#f7e9ff]"></div>
+    <div class="absolute top-[60%] z-0 w-full h-[1px] bg-[#f7e9ff]"></div>
+    <div class="absolute top-[30%] z-0 w-full h-[1px] bg-[#f7e9ff]"></div>
+    <div class="absolute top-[70%] z-0 w-full h-[1px] bg-[#f7e9ff]"></div>
+    <div class="absolute top-[80%] z-0 w-full h-[1px] bg-[#f7e9ff]"></div>
+    <div class="absolute top-[20%] z-0 w-full h-[1px] bg-[#f7e9ff]"></div>
+    <div class="absolute top-[90%] z-0 w-full h-[1px] bg-[#f7e9ff]"></div>
+    <div class="absolute top-[10%] z-0 w-full h-[1px] bg-[#f7e9ff]"></div>
+    <div
+      class="flex-1 z-10 w-full lg:mx-4 lg:max-w-[90vw] xl:max-w-[80rem] flex justify-between h-20 bg-[#C8A1E0] lg:rounded-full pl-6 lg:pl-2 p-2 overflow-hidden">
+      <div class="hidden lg:flex gap-2">
+        <div
+          class="flex items-center text-lg font-semibold bg-[#FFFBF5] text-[#C8A1E0] px-8 rounded-full cursor-pointer hover:bg-[#F7EFE5] transition-all">
+          <a href="#home">Home</a>
+        </div>
+        <div
+          class="flex items-center text-lg font-semibold text-[#FFFBF5] hover:text-[#C8A1E0] px-8 rounded-full cursor-pointer hover:bg-[#F7EFE5] transition-all">
+          <a href="#about">About</a>
+        </div>
+        <div
+          class="flex items-center text-lg font-semibold text-[#FFFBF5] hover:text-[#C8A1E0] px-8 rounded-full cursor-pointer hover:bg-[#F7EFE5] transition-all whitespace-nowrap">
+
+          <a href="#contact">Contact</a>
+        </div>
       </div>
-      <header>
-        <div class="container">
-          <nav id="main-nav" class="flex items-center justify-between">
-            <div class="left flex items-center">
-              <div>
-                <a href="#">Home</a>
-                <a href="#about">About</a>
-                <a href="#services">Skills</a>
-              </div>
-            </div>
-            <div class="right">
-              <button class="btn btn-primary">Contact</button>
-            </div>
-          </nav>
-          <div class="hero flex items-center justify-between">
-            <div class="left flex-1 flex justify-center mandiv">
-              <img class="wow fadeInLeft man" src="./images/man.jpg" alt="" />
-            </div>
-            <div class="wow fadeInRight right flex-1">
-              <h6>Doulat Ram</h6>
-              <h1>I’m a <span>CSE Student</span></h1>
-              <h1 style="font-size: large">
-                <span style="font-size: 30px">Welcome </span>to my Portfolio
-              </h1>
-              <p>Building the Future with Technology</p>
-              <div>
-                <a
-                  target="_blank"
-                  style="text-decoration: none"
-                  href="https://drive.google.com/file/d/1j6SWUZdT39T1an45M2CX8XNsjmhmyNZw/view"
-                  class="btn btn-secondary"
-                  >DOWNLOAD CV</a
-                >
-              </div>
-            </div>
-          </div>
+      <div class="logo flex items-center">
+        <h1
+          class="cursor-pointer text-4xl hover:-rotate-3 -rotate-0 specialtext tracking-wider hover:tracking-widest transition-all">
+          Doulat ram
+        </h1>
+      </div>
+      <div class="hidden lg:flex gap-2">
+        <div onclick="openResume()"
+          class="flex items-center text-lg font-semibold text-[#FFFBF5] hover:text-[#C8A1E0] px-8 rounded-full cursor-pointer hover:bg-[#F7EFE5] transition-all">
+          Resume
         </div>
-      </header>
-
-      <section id="about" class="about">
-        <div class="container flex items-center about-inner-wrap">
-          <div class="flex-1 aboutImg">
-            <img
-              class="wow fadeInLeft about-me-img"
-              src="./images/man-2.png"
-              alt=""
-            />
-          </div>
-          <div class="wow fadeInRight flex-1 right">
-            <h1>About <span>Me</span></h1>
-            <h3>Hello, i’m Doulat Ram.</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit
-              amet consectetur adipisicing elit sed do eiusmod tempor incididunt
-              ut labore et dolore magna aliqua. Ut enim ad minim veniam quis
-              nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat
-            </p>
-            <div class="social">
-              <a
-                target="_blank"
-                href="https://www.linkedin.com/in/doulat-ram-8362a623a/"
-                ><img src="./images/linkedin.png" alt=""
-              /></a>
-              <a target="_blank" href="https://github.com/sameer90417">
-                <img src="./images/githubw.png" alt=""
-              /></a>
-              <a target="_blank" href="https://www.instagram.com/_sameer_1000/">
-                <img src="./images/instagram.png" alt=""
-              /></a>
-            </div>
-          </div>
+        <script>
+          function openResume() {
+            window.open('https://drive.google.com/file/d/1j6SWUZdT39T1an45M2CX8XNsjmhmyNZw/view', '_blank')
+          }
+        </script>
+        <div
+          class="flex items-center text-lg font-semibold text-[#FFFBF5] hover:text-[#C8A1E0] px-8 rounded-full cursor-pointer hover:bg-[#F7EFE5] transition-all whitespace-nowrap">
+          <a href="#education">Education</a>
         </div>
-      </section>
-      <section id="services" class="services">
-        <div class="container">
-          <h1 class="section-heading wow flipInX"><span>My </span>Skills</h1>
-          <p class="wow flipInX">
-            I'm very enthusiastic for learning new Technology and implement them
-            in real life.
-          </p>
-          <div class="card-wrapper">
-            <div class="wow fadeInUp card">
-              <img width="110" height="110" src="./images/java.png" alt="" />
-              <h2>Java</h2>
-              <p>
-                There are many variations of passages of but the majority have
-                suffered alteration in some form.
-              </p>
-            </div>
-            <div class="wow fadeInUp card">
-              <img width="110" height="110" src="./images/hibernate" alt="" />
-              <h2>Hibernate</h2>
-              <p>
-                There are many variations of passages of but the majority have
-                suffered alteration in some form.
-              </p>
-            </div>
-            <div class="wow fadeInUp card">
-              <img width="110" height="110" src="./images/mysql.png" alt="" />
-              <h2>MySQL</h2>
-              <p>
-                There are many variations of passages of but the majority have
-                suffered alteration in some form.
-              </p>
-            </div>
-            <div class="wow fadeInUp card">
-              <img width="110" height="110" src="./images/web.jpg" alt="" />
-              <h2>Web Designing</h2>
-              <p>
-                There are many variations of passages of but the majority have
-                suffered alteration in some form.
-              </p>
-            </div>
-            <div class="wow fadeInUp card">
-              <img
-                width="110"
-                height="110"
-                src="./images/javascript.png"
-                alt=""
-              />
-              <h2>Javascript</h2>
-              <p>
-                There are many variations of passages of but the majority have
-                suffered alteration in some form.
-              </p>
-            </div>
-            <div class="wow fadeInUp card">
-              <img width="110" height="110" src="./images/spring.svg" alt="" />
-              <h2>Spring framework</h2>
-              <p>
-                There are many variations of passages of but the majority have
-                suffered alteration in some form.
-              </p>
-            </div>
-          </div>
+        <div
+          class="flex items-center text-lg font-semibold text-[#FFFBF5] hover:text-[#C8A1E0] px-8 rounded-full cursor-pointer hover:bg-[#F7EFE5] transition-all whitespace-nowrap">
+          <a href="#services">Skills</a>
         </div>
-      </section>
-      <section class="freelancer">
-        <h1 class="wow fadeInLeft">I Am looking For Internship.</h1>
-        <p class="wow fadeInRight">
-          Passionate Student Eager to Gain Practical Skills in Internship Role
-        </p>
-        <a
-          class="btn btn-primary"
-          target="_blank"
-          style="text-decoration: none"
-          href="https://drive.google.com/file/d/1j6SWUZdT39T1an45M2CX8XNsjmhmyNZw/view"
-          >DOWNLOAD CV</a
-        >
-      </section>
-      <section class="reviews">
-        <div class="container wow fadeInLeft">
-          <h1 class="section-heading"><span>My</span> Qualification</h1>
-          <br /><br />
-          <div class="slider">
-            <div class="slide">
-              <img src="./images/man.jpg" alt="" />
-              <h3>B.Tech. CSE (Computer Science Engineering)</h3>
-              <br />
-              <p class="section-heading"><span>Batch : </span>2020-2024</p>
-              <p class="section-heading">
-                <span>Collage : </span>Swami Vivekanand Institute of Engineering
-                and Technology, Rajpura Punjab
-              </p>
-              <span>Average 8.29 SGPA till 5th semester</span>
-            </div>
-            <div class="slide">
-              <img src="./images/man.jpg" alt="" />
-              <h3>Intermediate</h3>
-              <br />
-              <p class="section-heading"><span>Session : </span>2018-2020</p>
-              <p class="section-heading">
-                <span>School : </span>Govt. Boy School, Fazilka Punjab
-              </p>
-              <span>82%</span>
-            </div>
-            <div class="slide">
-              <img src="./images/man.jpg" alt="" />
-              <h3>Matriculation</h3>
-              <br />
-              <p class="section-heading"><span>Session : </span>2016-2018</p>
-              <p class="section-heading">
-                <span>School : </span>S.D. High School, Fazilka Punjab
-              </p>
-              <span>81.3%</span>
-            </div>
-          </div>
-          <div class="slider-dots"></div>
-        </div>
-      </section>
-
-      <section class="contact">
-        <div class="container">
-          <h1 class="wow fadeInUp section-heading">Contact <span>me</span></h1>
-          <br /><br />
-          <div class="card-wrapper">
-            <div class="card">
-              <img class="wow tada" src="./images/call.png" alt="" />
-              <h1>Calling no</h1>
-              <h6>+91 6283574563</h6>
-            </div>
-            <div class="card">
-              <img class="wow swing" src="./images/email.png" alt="" />
-              <h1>Email id</h1>
-              <h6>sameerkumar37555@gmail.com</h6>
-            </div>
-            <div class="card">
-              <img class="wow bounceIn" src="./images/address.png" alt="" />
-              <h1>Address</h1>
-              <h6>Fazilka, Punjab</h6>
-            </div>
-          </div>
-        </div>
-      </section>
-      <footer>
-        <div class="footer-socials">
-          <a
-            target="_blank"
-            href="https://www.linkedin.com/in/doulat-ram-8362a623a/"
-            ><img src="./images/linkedin.png" alt=""
-          /></a>
-          <a target="_blank" href="https://github.com/sameer90417">
-            <img src="./images/githubw.png" alt=""
-          /></a>
-          <a target="_blank" href="https://www.instagram.com/_sameer_1000/">
-            <img src="./images/instagram.png" alt=""
-          /></a>
-        </div>
-        <div class="copyright">Copyright 2023 © Doulat Ram</div>
-      </footer>
+      </div>
     </div>
+  </header>
+  <section>
+    <!-- Home Section -->
+    <div id="home" class="bg-[#fffbf5] w-full h-fit lg:h-screen pt-20 p-8"
+      style="overflow-x: hidden !important;">
+      <div class="flex flex-wrap gap-6 h-[90%] relative">
+        <div class="absolute top-[450px] left-36 img-container"></div>
+        <div class="absolute top-[80px] left-[-90px] img-container2"></div>
+        <div
+          class="w-full lg:w-[20%] border-2 border-[#C8A1E0] rounded-2xl h-fit p-4 pb-12 flex flex-col gap-8 glass-panel">
+          <div class="flex gap-6 justify-center relative">
+            <div
+              class="w-32 h-32 z-10 bg-[#f7e9ff] overflow-hidden cursor-pointer hover:scale-110 rounded-full transition-all profile">
+              <img src="/images/man.jpg" class="w-full" />
+            </div>
+            <div class="absolute top-[50%] z-0 w-full h-[1px] bg-[#f7e9ff]"></div>
+            <div class="absolute top-[40%] z-0 w-full h-[1px] bg-[#f7e9ff]"></div>
+            <div class="absolute top-[60%] z-0 w-full h-[1px] bg-[#f7e9ff]"></div>
+            <div class="absolute top-[30%] z-0 w-full h-[1px] bg-[#f7e9ff]"></div>
+            <div class="absolute top-[70%] z-0 w-full h-[1px] bg-[#f7e9ff]"></div>
+            <div class="absolute top-[80%] z-0 w-full h-[1px] bg-[#f7e9ff]"></div>
+            <div class="absolute top-[20%] z-0 w-full h-[1px] bg-[#f7e9ff]"></div>
+            <div class="absolute top-[90%] z-0 w-full h-[1px] bg-[#f7e9ff]"></div>
+            <div class="absolute top-[10%] z-0 w-full h-[1px] bg-[#f7e9ff]"></div>
+          </div>
+          <div class="w-full h-1 bg-[#C3ACD0] rounded-full "></div>
+          <div class="flex flex-col gap-6">
+            <div class="flex items-center gap-4 cursor-pointer">
+              <span class="material-symbols-outlined text-[#C3ACD0]">
+                mail
+              </span>
+              <h2 class="text-lg text-[#8f8a91] hover:underline truncate">
+                doulatram3755@gmail.com
+              </h2>
+            </div>
+            <div class="flex items-center gap-4 cursor-pointer">
+              <span class="material-symbols-outlined text-[#C3ACD0]">
+                public
+              </span>
+              <h2 class="text-lg text-[#8f8a91] hover:underline truncate">doulat.netlify.app</h2>
+            </div>
+            <div class="flex items-center gap-4 cursor-pointer">
+              <span class="material-symbols-outlined text-[#C3ACD0]">
+                call
+              </span>
+              <h2 class="text-lg text-[#8f8a91] hover:underline truncate">+919463140834</h2>
+            </div>
+            <div class="flex items-center gap-4 cursor-pointer">
+              <span class="material-symbols-outlined text-[#C3ACD0]">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                  <path fill="currentColor"
+                    d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37z" />
+                </svg>
+              </span>
+              <a class="text-lg text-[#8f8a91] hover:underline" href="https://www.linkedin.com/in/doulat-ram-8362a623a/"
+                target="_blank">
+                linkedin.com
+              </a>
+            </div>
+            <div class="flex items-center gap-4 cursor-pointer">
+              <span class="material-symbols-outlined text-[#C3ACD0]">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="22px" height="22px">
+                  <path fill="currentColor"
+                    d="M17.791,46.836C18.502,46.53,19,45.823,19,45v-5.4c0-0.197,0.016-0.402,0.041-0.61C19.027,38.994,19.014,38.997,19,39 c0,0-3,0-3.6,0c-1.5,0-2.8-0.6-3.4-1.8c-0.7-1.3-1-3.5-2.8-4.7C8.9,32.3,9.1,32,9.7,32c0.6,0.1,1.9,0.9,2.7,2c0.9,1.1,1.8,2,3.4,2 c2.487,0,3.82-0.125,4.622-0.555C21.356,34.056,22.649,33,24,33v-0.025c-5.668-0.182-9.289-2.066-10.975-4.975 c-3.665,0.042-6.856,0.405-8.677,0.707c-0.058-0.327-0.108-0.656-0.151-0.987c1.797-0.296,4.843-0.647,8.345-0.714 c-0.112-0.276-0.209-0.559-0.291-0.849c-3.511-0.178-6.541-0.039-8.187,0.097c-0.02-0.332-0.047-0.663-0.051-0.999 c1.649-0.135,4.597-0.27,8.018-0.111c-0.079-0.5-0.13-1.011-0.13-1.543c0-1.7,0.6-3.5,1.7-5c-0.5-1.7-1.2-5.3,0.2-6.6 c2.7,0,4.6,1.3,5.5,2.1C21,13.4,22.9,13,25,13s4,0.4,5.6,1.1c0.9-0.8,2.8-2.1,5.5-2.1c1.5,1.4,0.7,5,0.2,6.6c1.1,1.5,1.7,3.2,1.6,5 c0,0.484-0.045,0.951-0.11,1.409c3.499-0.172,6.527-0.034,8.204,0.102c-0.002,0.337-0.033,0.666-0.051,0.999 c-1.671-0.138-4.775-0.28-8.359-0.089c-0.089,0.336-0.197,0.663-0.325,0.98c3.546,0.046,6.665,0.389,8.548,0.689 c-0.043,0.332-0.093,0.661-0.151,0.987c-1.912-0.306-5.171-0.664-8.879-0.682C35.112,30.873,31.557,32.75,26,32.969V33 c2.6,0,5,3.9,5,6.6V45c0,0.823,0.498,1.53,1.209,1.836C41.37,43.804,48,35.164,48,25C48,12.318,37.683,2,25,2S2,12.318,2,25 C2,35.164,8.63,43.804,17.791,46.836z" />
+                </svg>
+              </span>
+              <a class="text-lg text-[#8f8a91] hover:underline" href="https://github.com/sameer90417" target="_blank">
+                github.com
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col items-center flex-1">
+          <div class="flex flex-col gap-6 p-6 w-full h-full justify-end z-10">
+            <h2 class="text-4xl font-bold text-[#565656]">Hello👋👋 &nbsp; &nbsp;I'm Doulat</h2>
+            <h2 class="text-5xl font-extrabold text-[#C3ACD0]" id="typing-text"></h2>
+          </div>
+          <div class="relative w-full h-full">
+            <!-- <img width="400" src="2.png" /> -->
+            <!-- <div
+              class="border-[2px] border-[#C8A1E0] w-[80px] h-[80px] rounded-full absolute bottom-[53%] right-[-100px]">
+            </div>
+            <div
+              class="border-[2px] border-[#C8A1E0] w-[120px] h-[120px] rounded-full absolute bottom-[50%] right-[-100px]">
+            </div>
+            <div
+              class="border-[2px] border-[#C8A1E0] w-[160px] h-[160px] rounded-full absolute bottom-[46.5%] right-[-100px]">
+            </div>
+            <div
+              class="border-[2px] border-[#C8A1E0] w-[200px] h-[200px] rounded-full absolute bottom-[43.5%] right-[-100px]">
+            </div>
+            <div
+              class="border-[2px] border-[#C8A1E0] w-[240px] h-[240px] rounded-full absolute bottom-[40.5%] right-[-100px]">
+            </div>
+            <div
+              class="border-[2px] border-[#C8A1E0] w-[280px] h-[280px] rounded-full absolute bottom-[37.5%] right-[-100px]">
+            </div>
+            <div
+              class="border-[2px] border-[#C8A1E0] w-[320px] h-[320px] rounded-full absolute bottom-[34.5%] right-[-100px]">
+            </div>
+            <div
+              class="border-[2px] border-[#C8A1E0] w-[360px] h-[360px] rounded-full absolute bottom-[31.5%] right-[-100px]">
+            </div>
+            <div
+              class="border-[2px] border-[#C8A1E0] w-[620px] h-[620px] rounded-full absolute bottom-[5%] right-[-300px]">
+            </div>
+            <div
+              class="border-[2px] border-[#C8A1E0] w-[760px] h-[760px] rounded-full absolute bottom-[-9%] right-[-400px]">
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <script
-      type="text/javascript"
-      src="https://code.jquery.com/jquery-1.11.0.min.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
-    ></script>
-    <script src="./js/app.js"></script>
-    <script>
-      wow = new WOW({
-        boxClass: "wow", // default
-        animateClass: "animated", // default
-        offset: 0, // default
-        mobile: true, // default
-        live: true, // default
+  <!-- socials -->
+  <!-- <div class="fixed bottom-4 right-4">
+    <div class="social-links">
+      <div id="twitter" class="social-btn flex-center">
+        <svg viewBox="0 0 24 24" height="24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z">
+          </path>
+        </svg><span> <a class="text-lg hover:underline" href="https://x.com/sameer90417" target="_blank">
+            @doulat
+          </a></span>
+      </div>
+
+      <div id="linkedin" class="social-btn flex-center">
+        <svg viewBox="0 0 24 24" height="24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z">
+          </path>
+        </svg><span> <a class="text-lg hover:underline" href="https://www.linkedin.com/in/doulat-ram-8362a623a/"
+            target="_blank">
+            @doulat
+          </a></span>
+      </div>
+
+      <div id="github" class="social-btn flex-center">
+        <svg viewBox="0 0 24 24" height="24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z">
+          </path>
+        </svg><span><a class="text-lg hover:underline" href="https://github.com/sameer90417" target="_blank">
+            @doulat
+          </a></span>
+      </div>
+    </div>
+  </div> -->
+  <script>
+    const textArray = [
+      "A frontend developer.",
+      "Passionate about design.",
+      "Crafting seamless experiences.",
+      "Let's build something amazing."
+    ];
+
+    let currentText = 0;
+    const typingSpeed = 100;
+    const erasingSpeed = 20;
+    const newTextDelay = 1000;
+
+    const typingTextElement = document.getElementById('typing-text');
+
+    function type() {
+      let text = textArray[currentText];
+      let index = 0;
+      typingTextElement.innerHTML = '';
+
+      function typing() {
+        if (index < text.length) {
+          typingTextElement.innerHTML += text.charAt(index);
+          index++;
+          setTimeout(typing, typingSpeed);
+        } else {
+          setTimeout(erase, newTextDelay);
+        }
+      }
+
+      function erase() {
+        if (index > 0) {
+          typingTextElement.innerHTML = text.substring(0, index - 1) || ".";
+          index--;
+          setTimeout(erase, erasingSpeed);
+        } else {
+          currentText = (currentText + 1) % textArray.length;
+          setTimeout(type, newTextDelay);
+        }
+      }
+
+      typing();
+    }
+
+    document.addEventListener('DOMContentLoaded', type);
+  </script>
+
+  <section id="about" class="about py-8">
+    <div class="container flex items-center about-inner-wrap">
+      <div class="flex-1 aboutImg invisible hidden lg:block">
+        <img class="wow fadeInLeft about-me-img" src="./images/man-2.png" alt="" />
+      </div>
+      <div class="wow fadeInRight flex-1 right border-2 rounded-[10px] p-6 border-[#C8A1E0]">
+        <h1>About <span class="!text-[#C8A1E0]">Me</span></h1>
+        <h3>Hello, i’m Doulat Ram.</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+          enim ad minim veniam quis nostrud exercitation ullamco laboris
+          nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit
+          amet consectetur adipisicing elit sed do eiusmod tempor incididunt
+          ut labore et dolore magna aliqua. Ut enim ad minim veniam quis
+          nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat
+        </p>
+        <div class="social">
+          <a target="_blank" href="https://www.linkedin.com/in/doulat-ram-8362a623a/"><img src="./images/linkedin.png"
+              alt="" /></a>
+          <a target="_blank" href="https://github.com/sameer90417">
+            <img src="./images/githubw.png" alt="" /></a>
+          <a target="_blank" href="https://www.instagram.com/_sameer_1000/">
+            <img src="./images/instagram.png" alt="" /></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="services py-20">
+    <div class="container">
+      <h1 class="section-heading wow flipInX"><span class="!text-[#C8A1E0]">My </span>Skills</h1>
+      <p class="wow flipInX">
+        I'm very enthusiastic for learning new Technology and implement them
+        in real life.
+      </p>
+      <div class="card-wrapper">
+        <div class="wow fadeInUp card">
+          <img width="110" height="110" src="./images/java.png" alt="" />
+          <h2>Java</h2>
+          <p>
+            There are many variations of passages of but the majority have
+            suffered alteration in some form.
+          </p>
+        </div>
+        <div class="wow fadeInUp card">
+          <img width="110" height="110" src="./images/hibernate" alt="" />
+          <h2>Hibernate</h2>
+          <p>
+            There are many variations of passages of but the majority have
+            suffered alteration in some form.
+          </p>
+        </div>
+        <div class="wow fadeInUp card">
+          <img width="110" height="110" src="./images/mysql.png" alt="" />
+          <h2>MySQL</h2>
+          <p>
+            There are many variations of passages of but the majority have
+            suffered alteration in some form.
+          </p>
+        </div>
+        <div class="wow fadeInUp card">
+          <img width="110" height="110" src="./images/web.jpg" alt="" />
+          <h2>Web Designing</h2>
+          <p>
+            There are many variations of passages of but the majority have
+            suffered alteration in some form.
+          </p>
+        </div>
+        <div class="wow fadeInUp card">
+          <img width="110" height="110" src="./images/javascript.png" alt="" />
+          <h2>Javascript</h2>
+          <p>
+            There are many variations of passages of but the majority have
+            suffered alteration in some form.
+          </p>
+        </div>
+        <div class="wow fadeInUp card">
+          <img width="110" height="110" src="./images/spring.svg" alt="" />
+          <h2>Spring framework</h2>
+          <p>
+            There are many variations of passages of but the majority have
+            suffered alteration in some form.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="freelancer flex justify-center items-center pt-24">
+    <!-- <h1 class="wow fadeInLeft">I Am looking For Internship.</h1> -->
+    <!-- <p class="wow fadeInRight">
+      Passionate Student Eager to Gain Practical Skills in Internship Role
+    </p> -->
+    <a class="btn btn-primary" target="_blank" style="text-decoration: none"
+      href="https://drive.google.com/file/d/1j6SWUZdT39T1an45M2CX8XNsjmhmyNZw/view">DOWNLOAD CV</a>
+  </section>
+  <section id="education" class="reviews py-20">
+    <div class="container wow fadeInLeft">
+      <h1 class="section-heading"><span class="!text-[#C3ACD0]">My</span> Qualification</h1>
+      <br /><br />
+      <div class="slider">
+        <div class="slide">
+          <img src="./images/man.jpg" alt="" />
+          <h3>B.Tech. CSE (Computer Science Engineering)</h3>
+          <br />
+          <p class="section-heading"><span class="!text-[#C3ACD0]">Batch : </span>2020-2024</p>
+          <p class="section-heading !leading-[10px]" style="line-height: 24px !important;">
+            <span class="!text-[#C3ACD0]">Collage : </span>Swami Vivekanand Institute of Engineering
+            and Technology, Rajpura Punjab
+          </p>
+          <span>8.49 SGPA</span>
+        </div>
+        <div class="slide">
+          <img src="./images/man.jpg" alt="" />
+          <h3>Intermediate</h3>
+          <br />
+          <p class="section-heading"><span class="!text-[#C3ACD0]">Session : </span>2018-2020</p>
+          <p class="section-heading">
+            <span class="!text-[#C3ACD0]">School : </span>Govt. Boy School, Fazilka Punjab
+          </p>
+          <span>82%</span>
+        </div>
+        <div class="slide">
+          <img src="./images/man.jpg" alt="" />
+          <h3>Matriculation</h3>
+          <br />
+          <p class="section-heading"><span class="!text-[#C3ACD0]">Session : </span>2016-2018</p>
+          <p class="section-heading">
+            <span class="!text-[#C3ACD0]">School : </span>S.D. High School, Fazilka Punjab
+          </p>
+          <span>81.3%</span>
+        </div>
+      </div>
+      <div class="slider-dots"></div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact py-20">
+    <div class="container">
+      <h1 class="wow fadeInUp section-heading">Contact <span class="!text-[#C3ACD0]">me</span></h1>
+      <br /><br />
+      <div class="card-wrapper">
+        <div class="card flex flex-col items-center">
+          <img class="wow tada" src="./images/call.png" alt="" />
+          <h1>Calling no</h1>
+          <h6>+91 9463140834</h6>
+        </div>
+        <div class="card flex flex-col items-center">
+          <img class="wow swing" src="./images/email.png" alt="" />
+          <h1>Email id</h1>
+          <h6>sameerkumar37555@gmail.com</h6>
+        </div>
+        <div class="card flex flex-col items-center">
+          <img class="wow bounceIn" src="./images/address.png" alt="" />
+          <h1>Address</h1>
+          <h6>Fazilka, Punjab</h6>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="w-full">
+    <div class="footer-socials flex justify-center">
+      <a target="_blank" href="https://www.linkedin.com/in/doulat-ram-8362a623a/"><img src="./images/linkedin.png"
+          alt="" /></a>
+      <a target="_blank" href="https://github.com/sameer90417">
+        <img src="./images/githubw.png" alt="" /></a>
+      <a target="_blank" href="https://www.instagram.com/_sameer_1000/">
+        <img src="./images/instagram.png" alt="" /></a>
+    </div>
+    <div class="copyright">Copyright 2024 © Doulat Ram</div>
+  </footer>
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="./js/app.js"></script>
+  <script>
+    wow = new WOW({
+      boxClass: "wow", // default
+      animateClass: "animated", // default
+      offset: 0, // default
+      mobile: true, // default
+      live: true, // default
+    });
+    wow.init();
+
+    $(document).ready(function () {
+      $(".slider").slick({
+        arrows: false,
+        dots: true,
+        appendDots: ".slider-dots",
+        dotsClass: "dots",
       });
-      wow.init();
 
-      $(document).ready(function () {
-        $(".slider").slick({
-          arrows: false,
-          dots: true,
-          appendDots: ".slider-dots",
-          dotsClass: "dots",
-        });
+      let hamberger = document.querySelector(".hamberger");
+      let times = document.querySelector(".times");
+      let mobileNav = document.querySelector(".mobile-nav");
 
-        let hamberger = document.querySelector(".hamberger");
-        let times = document.querySelector(".times");
-        let mobileNav = document.querySelector(".mobile-nav");
-
-        hamberger.addEventListener("click", function () {
-          mobileNav.classList.add("open");
-        });
-
-        times.addEventListener("click", function () {
-          mobileNav.classList.remove("open");
-        });
+      hamberger.addEventListener("click", function () {
+        mobileNav.classList.add("open");
       });
-    </script>
-  </body>
+
+      times.addEventListener("click", function () {
+        mobileNav.classList.remove("open");
+      });
+    });
+  </script>
+</body>
+
 </html>
